@@ -1,0 +1,60 @@
+.container-fluid{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.info{
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.info p{
+    color: #fff;
+}
+.info a{
+    color: #000;
+}
+.info a i{
+    color: #fff;
+}
+.info:hover{
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.info:nth-child(odd){
+    background-color: #AB47BC;
+}
+.info:nth-child(even){
+    background-color: #4CAF50;
+}
+.info:nth-child(3n+2){
+    background-color: #E91E63;
+}
+.info:nth-child(5n-2){
+    background-color: #FFEB3B;
+}
+.fa{
+    font-size: 20px;
+}
+.row .col.m2 {
+    width: 47%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+@media only screen and (max-width: 1199px){
+    .row .col.m2 {
+        width: 38%;
+        margin-left: auto;
+        left: auto;
+    }
+}
+@media only screen and (max-width: 992px){
+    .row .col.s12 {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}

@@ -1,0 +1,22 @@
+<table class="table striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone</th>
+      <th>Salary</th>
+      <th>Department name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of employees; let i=index" class="info">
+      <th>{{ i+1}}</th>
+      <th>{{employee.firstName}}</th>
+      <th>{{employee.firstName}}</th>
+      <th>{{employee.phone}}</th>
+      <th>{{employee.salary}}</th>
+      <th>{{employee.departmentName}}</th>
+    </tr>
+    </tbody>
+</table>
