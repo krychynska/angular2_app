@@ -25,18 +25,12 @@ export class DepartmentService{
         return this.http
             .get(url.getDepartmentsUrl)
             .map((res: Response) => res.json())
-            .do((response) => {
-               // console.log(JSON.stringify(response));
-            })
             .catch(this.handleError);
     }
     public getDepartment(id: number): Observable<Department[]> {
         return this.http
             .get(`${url.getDepartmentsUrl}/${id}`, {headers: this.headers})
             .map((res: Response) => res.json())
-            .do((response) => {
-              //  console.log(JSON.stringify(response));
-            })
             .catch(this.handleError);
     }
     public deleteDepartment(id: number): Observable<any> {

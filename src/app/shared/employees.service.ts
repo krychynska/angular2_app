@@ -24,7 +24,6 @@ export class EmployeesService {
         return this.http
             .get(url.getEmployeesUrl)
             .map((res: Response) => res.json())
-           // .do((response) => {console.log(JSON.stringify(response));})
             .catch(this.handleError);
     }
 
