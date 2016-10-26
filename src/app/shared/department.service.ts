@@ -26,7 +26,7 @@ export class DepartmentService{
             .get(url.getDepartmentsUrl)
             .map((res: Response) => res.json())
             .do((response) => {
-                console.log(JSON.stringify(response));
+               // console.log(JSON.stringify(response));
             })
             .catch(this.handleError);
     }
@@ -35,7 +35,7 @@ export class DepartmentService{
             .get(`${url.getDepartmentsUrl}/${id}`, {headers: this.headers})
             .map((res: Response) => res.json())
             .do((response) => {
-                console.log(JSON.stringify(response));
+              //  console.log(JSON.stringify(response));
             })
             .catch(this.handleError);
     }

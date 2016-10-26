@@ -2,6 +2,9 @@ nav a {
     color: #fff;
     font-size: 22px;
 }
+.logo {
+    margin-left: 15px;
+}
 @media only screen and (max-width: 992px){
 	nav ul{
 	display: block;
@@ -17,5 +20,6 @@ nav a {
 }
 	.logo{
 		display: none;
+
 	}
 }
