@@ -11,14 +11,14 @@
     cursor: pointer;
 }
 .info p{
-    color: #fff;
-    margin-top: 0;
+    margin-bottom: 7px;
+    margin-top: 5px;
     font-size: 16px;
 }
 .info a{
     color: #000;
 }
-.info a i{
+.info a i, .info p, span.badge{
     color: #fff;
 }
 .info:hover{
@@ -45,9 +45,12 @@
 }
 .row .col.m2 {
     width: 47%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
+}
+span.badge {
+    padding: 4px 6px;
+    margin: 5px;
+    font-size: 13px;
+    position: static;
 }
 @media only screen and (max-width: 1199px){
     .row .col.m2 {

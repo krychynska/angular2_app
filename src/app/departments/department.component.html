@@ -4,16 +4,17 @@
            (click)="deleteDepartment(department)">
             <i class="material-icons">clear</i>
         </a>
-    <p>{{ i+1}}.{{department.name}}</p>
-    <p>{{department.description}}</p>
-    <p><a [routerLink]="['/employees']">Get Employees</a></p>
-  </div>
+        <p>{{ i+1}}.{{department.name}}</p>
+        <p>{{department.description}}</p>
+        <span class="new badge" data-badge-caption="found">4</span>
+        <p><a [routerLink]="['/employees']">See Employees</a></p>
+    </div>
 </div>
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-  <a class="btn-floating btn-large waves-effect waves-light"
-     routerLink="new">
-    <i class="material-icons">add</i>
-  </a>
-  </div>
+    <a class="btn-floating btn-large waves-effect waves-light"
+       routerLink="new">
+        <i class="material-icons">add</i>
+    </a>
+</div>
 
   

@@ -5,3 +5,6 @@ form{
     display: block;
     margin: auto;
 }
+.input-field .prefix{
+    margin-top: 12px;
+}
