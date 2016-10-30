@@ -21,7 +21,7 @@ export class DepartmentFormComponent implements OnInit {
   setValue() { this.form.setValue({name: '', description: ''}); }
 
   title: string;
-  department: Department = new Department();
+  department: Department = Department;
 
   constructor(
     formBuilder: FormBuilder,
@@ -48,12 +48,7 @@ export class DepartmentFormComponent implements OnInit {
 
       this.DepartmentService.getDepartment(id)
         .subscribe(
-            department => this.department = department,
-          response => {
-            if (response.status == 404) {
-              this.router.navigate(['NotFound']);
-            }
-          });
+            department => this.department = Department);
     });
   }
 
