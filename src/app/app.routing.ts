@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule }   from '@angular/router';
 
-import { DepartmentComponent } from './home/department.component';
-import { DepartmentFormComponent } from './home/department-form/department-form.component'
+import { DepartmentComponent } from './departments/department.component';
+import { DepartmentFormComponent } from './departments/department-form/department-form.component'
 import { EmployeesComponent } from './employees/employees.component';
 
 const appRoutes: Routes = [

@@ -7,7 +7,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
-import { DepartmentsModule } from './home/department.module';
+import { DepartmentsModule } from './departments/department.module';
 import { routing } from './app.routing';
 
 import { EmployeesComponent} from './employees/employees.component';
