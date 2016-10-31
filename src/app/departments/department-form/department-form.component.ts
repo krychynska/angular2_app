@@ -40,16 +40,6 @@ export class DepartmentFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    var id = this.route.params.subscribe(params => {
-      var id = params['id'];
-
-      if (!id)
-        return;
-
-      this.DepartmentService.getDepartment(id)
-        .subscribe(
-            department => this.department = Department);
-    });
   }
 
   save() {

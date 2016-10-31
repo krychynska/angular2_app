@@ -7,12 +7,12 @@ import {Department} from './department.class';
 import *as url from './constants_url'
 
 @Injectable()
+
 export class DepartmentService{
 
     private headers = new Headers({'Content-Type': 'application/json'});
 
-    constructor(private http: Http) {
-    }
+    constructor(private http: Http) {}
 
 
     private handleError(error: any) {
@@ -27,21 +27,16 @@ export class DepartmentService{
             .map((res: Response) => res.json())
             .catch(this.handleError);
     }
-    public getDepartment(id: number): Observable<Department[]> {
-        return this.http
-            .get(`${url.getDepartmentsUrl}/${id}`, {headers: this.headers})
-            .map((res: Response) => res.json())
-            .catch(this.handleError);
-    }
-    public deleteDepartment(id: number): Observable<any> {
-        return this.http.delete(`${url.delDepartmentUrl}/${id}`, {headers: this.headers})
-            .catch(this.handleError);
-    }
-
     public createDepartment(department): Observable<Department[]> {
         return this.http.post(`${url.postDepartmentsUrl}`, JSON.stringify(department), {headers: this.headers})
             .map((res: Response) => res.json())
             .catch(this.handleError);
     }
+
+    public deleteDepartment(id: number): Observable<any> {
+        return this.http.delete(`${url.delDepartmentUrl}/${id}`, {headers: this.headers})
+            .catch(this.handleError);
+    }
+
 
 }

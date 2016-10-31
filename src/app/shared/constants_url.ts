@@ -6,4 +6,4 @@ export const postDepartmentsUrl:string = baseUrl + 'departments'; // add new dep
 export const delDepartmentUrl:string = baseUrl + 'departments'; // + id of department, delete department
 
 export const getEmployeesUrl:string = baseUrl + 'employees';  // get employees
-export const getGroupUrl:string = baseUrl+'count'; // + id of department? counts employees
+export const getGroupUrl:string = baseUrl+'employees/count'; // + id of department? counts employees

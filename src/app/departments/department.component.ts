@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Department } from '../shared/department.class';
+import {Department} from '../shared/department.class';
+
 import { DepartmentService } from "../shared/department.service";
 
 @Component({
@@ -25,7 +26,6 @@ export class DepartmentComponent implements OnInit {
             error => this.errorMessage = <any>error
         );
   }
-
   deleteDepartment(department: Department): void {
     if (confirm('Confirm')) {
       this.DepartmentService

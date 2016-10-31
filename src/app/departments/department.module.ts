@@ -24,7 +24,7 @@ import { DepartmentFormComponent } from '../departments/department-form/departme
         DepartmentComponent
     ],
     providers: [
-        DepartmentService
+        DepartmentService,
     ]
 })
 export class DepartmentsModule { }

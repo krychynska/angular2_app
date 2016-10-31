@@ -1,12 +1,14 @@
 <div class="row">
     <div *ngFor="let department of departments; let i=index" class="info col m2 s12 z-depth-1">
+        <div class="delete">
         <a class="btn-sm" role="button" title="Delete Department"
            (click)="deleteDepartment(department)">
             <i class="material-icons">clear</i>
         </a>
+        </div>
         <p>{{ i+1}}.{{department.name}}</p>
         <p>{{department.description}}</p>
-        <span class="new badge" data-badge-caption="found">4</span>
+
         <p><a [routerLink]="['/employees']">See Employees</a></p>
     </div>
 </div>
