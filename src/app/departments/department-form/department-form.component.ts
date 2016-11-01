@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Department } from '../../shared/department.class';
 import { DepartmentService } from '../../shared/department.service';
 
 @Component({
@@ -15,13 +14,6 @@ export class DepartmentFormComponent implements OnInit {
     name: new FormControl(),
     description: new FormControl(''),
   });
-  onSubmit(): void {
-    console.log(this.form.value);
-  }
-  setValue() { this.form.setValue({name: '', description: ''}); }
-
-  title: string;
-  department: Department = Department;
 
   constructor(
     formBuilder: FormBuilder,
@@ -31,16 +23,17 @@ export class DepartmentFormComponent implements OnInit {
   ) {
     this.form = formBuilder.group({
       name: ['', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(3)
       ]],
       description: ['', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(3)
       ]]
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   save() {
     var result,

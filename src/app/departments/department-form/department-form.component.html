@@ -4,9 +4,11 @@
       <div class="input-field col s12">
         <i class="material-icons prefix">account_circle</i>
         <input id="name" class="validate"
-               [(ngModel)]="name" formControlName="name">
+               [(ngModel)]="name" formControlName="name"
+               [class.invalid]="form.controls['name'].touched && !form.controls['name'].valid">
         <label for="name"
-               [class.active]="name">
+               [class.active]="name"
+               data-error="Name is required and needs to contain at least 3 chars">
           Name
         </label>
       </div>
@@ -15,14 +17,16 @@
       <div class="input-field col s12">
         <i class="material-icons prefix">description</i>
         <input id="description" class="validate"
-               [(ngModel)]="description" formControlName="description">
+               [(ngModel)]="description" formControlName="description"
+               [class.invalid]="form.controls['description'].touched && !form.controls['description'].valid">
         <label for="description"
-               [class.active]="description">
+               [class.active]="description"
+               data-error="Description is required and needs to contain at least 3 chars">
           Description
         </label>
       </div>
     </div>
-    <button class="btn waves-effect waves-light" type="submit">
+    <button class="btn waves-effect waves-light" type="submit" [disabled]="!form.valid">
       Submit<i class="material-icons right">send</i>
     </button>
   </form>
