@@ -11,7 +11,7 @@ import { DepartmentService } from '../../shared/department.service';
 })
 export class DepartmentFormComponent implements OnInit {
   form = new FormGroup({
-    name: new FormControl(),
+    name: new FormControl(''),
     description: new FormControl(''),
   });
 

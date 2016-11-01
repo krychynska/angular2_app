@@ -4,7 +4,6 @@ export class Employee {
     lastName?: string;
     phone?: number;
     salary?: number;
-    departmentId?: number;
     departmentName?: string;
 
 constructor(firstName:string, lastName: string, phone: number, salary: number, departmentName: string) {
