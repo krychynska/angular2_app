@@ -1,4 +1,4 @@
-export const baseUrl:string = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/';
+export const baseUrl:string = 'localhost:4200';
 
 //CRUD Action which entity
 export const getDepartmentsUrl:string = baseUrl + 'departments'; //get department
